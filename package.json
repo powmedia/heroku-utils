@@ -1,0 +1,14 @@
+{
+  "name": "heroku-utils",
+  "version": "1.0.0",
+  "description": "Utilities for apps running on Heroku",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "heroku"
+  ],
+  "author": "Charlie Davison",
+  "license": "ISC"
+}
