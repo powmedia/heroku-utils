@@ -6,10 +6,10 @@
  * @return {String}
  */
 exports.getRemoteIp = function(req) {
-  var ip = req.headers["x-forwarded-for"];
+  var ip = req.headers['x-forwarded-for'];
 
   if (ip){
-    var list = ip.split(",");
+    var list = ip.split(',');
     ip = list[list.length-1];
   } else {
     ip = req.connection.remoteAddress;
@@ -28,7 +28,7 @@ exports.forceHttps = function(req, res, next) {
   var protocol = req.headers['x-forwarded-proto'];
 
   if (protocol && protocol !== 'https') {
-    res.redirect('https://'+req.host+req.url);
+    res.redirect('https://' + req.headers.host + req.url);
   } else {
     next();
   }
